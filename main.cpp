@@ -103,7 +103,7 @@ void variableDeclarations()
 
 
 // function examples
-bool rentACar(int rentalDuration, int carType = 0)
+bool rentACar (int rentalDuration, int carType = 0)
 {
   ignoreUnused (rentalDuration, carType);
   return {}; 
@@ -221,6 +221,7 @@ int main()
 
   // 10)
   auto isInvited = canLegallyDrink(26, 11);
+
   ignoreUnused (carRented, currentVolume, isEngaged, salaryA, ageDifference, isInvited);
   std::cout << "good to go!" << std::endl;
   return 0;
