@@ -64,115 +64,111 @@ the 'auto' keyword. c) pass the local variables to ignoreUnused() as you did in
 // 2)
 void variableDeclarations() 
 {
-
 // example:
-  int number = 2;
-
+    int number = 2;
 // primitive type examples
-  int age = 24;
-  int numberOfChildren = 0;
-  int housesOwned = 0;
-
-  float decibels = 7.11f;
-  float milesPerMinute = 8.30f;
-  float bankBalance = 0.01f;
-
-  double distance = 4.221838411352;
-  double mass = 9.302927467771;
-  double pi = 3.1415926535897;
-
-  unsigned int numberOfItems = 5;
-  unsigned int loopCount = 3;
-  unsigned int numberOfVotes = 26139;
-
-  char firstInitial = 'J';
-  char middleInitial = 'S';
-  char surnameInitial = 'B';
-
-  bool isHuman = true;
-  bool isOver18 = true;
-  bool isMarried = false;
-
-  ignoreUnused (number, age, numberOfChildren, housesOwned, decibels,
-               milesPerMinute, bankBalance, distance, mass, g, numberOfItems,
-               loopCount, numberOfVotes, firstInitial, middleInitial,
-               surnameInitial, isHuman, isOver18,
-               isMarried); // passing each variable declared to the
-                           // ignoreUnused() function
+    int age = 24;
+    int numberOfChildren = 0;
+    int housesOwned = 0;
+    
+    float decibels = 7.11f;
+    float milesPerMinute = 8.30f;
+    float bankBalance = 0.01f;
+    
+    double distance = 4.221838411352;
+    double mass = 9.302927467771;
+    double pi = 3.1415926535897;
+    
+    unsigned int numberOfItems = 5;
+    unsigned int loopCount = 3;
+    unsigned int numberOfVotes = 26139;
+    
+    char firstInitial = 'J';
+    char middleInitial = 'S';
+    char surnameInitial = 'B';
+    
+    bool isHuman = true;
+    bool isOver18 = true;
+    bool isMarried = false;
+    
+    ignoreUnused(number, age, numberOfChildren, housesOwned, decibels,
+                   milesPerMinute, bankBalance, distance, mass, pi, numberOfItems,
+                   loopCount, numberOfVotes, firstInitial, middleInitial,
+                   surnameInitial, isHuman, isOver18,
+                   isMarried); // passing each variable declared to the
+                               // ignoreUnused() function
 }
 
-
 // function examples
-bool rentACar (int rentalDuration, int carType = 0)
+bool rentACar(int rentalDuration, int carType = 0)
 {
-  ignoreUnused (rentalDuration, carType);
-  return {}; 
-             
+    ignoreUnused(rentalDuration, carType);
+    return { };           
 }
 
 // 1
-void addAttitude (double knobValueChange, int distortionType, bool pluginBypassed = 0) 
+void addAttitude(double knobValueChange, int distortionType, bool pluginBypassed = 0) 
 {
-  ignoreUnused (knobValueChange, distortionType, pluginBypassed);
+    ignoreUnused(knobValueChange, distortionType, pluginBypassed);
 }
 
 // 2
-float getCurrentVolume (float knobValue, char compressionType = 'A') 
+float getCurrentVolume(float knobValue, char compressionType = 'A') 
 {
-  ignoreUnused (compressionType, knobValue);
-  return {};
+    ignoreUnused(compressionType, knobValue);
+    return { };
 }
 
 // 3
-bool isPersonEngaged (bool hasProposed, bool receivedYes, int numberOfPartners = 1) 
+bool isPersonEngaged(bool hasProposed, bool receivedYes, int numberOfPartners = 1) 
 {
-  ignoreUnused (numberOfPartners, receivedYes, hasProposed);
-  return {};
+    ignoreUnused(numberOfPartners, receivedYes, hasProposed);
+    return { };
 }
 
-/// 4
-void playerTakeDamage (float damageInput, int enemyLevel, bool playerIsAlive = 1) 
+// 4
+void playerTakeDamage(float damageInput, int enemyLevel, bool playerIsAlive = 1) 
 {
-  ignoreUnused (damageInput, enemyLevel, playerIsAlive);
+    ignoreUnused(damageInput, enemyLevel, playerIsAlive);
 }
 
 // 5
-void updateAmmoCount (int currentAmmo, int RPM, float dT) 
+void updateAmmoCount(int currentAmmo, int RPM, float dT) 
 {
-  ignoreUnused (currentAmmo, RPM, dT);
+    ignoreUnused(currentAmmo, RPM, dT);
 }
 
 // 6
-double calculateSalary (float baseSalary, float deductions = 0.0f)
+double calculateSalary(float baseSalary, float deductions = 0.0f)
 {
-  ignoreUnused (baseSalary, deductions);
-  return {};
+    ignoreUnused(baseSalary, deductions);
+    return { };
 }
 
 // 7
-void getFavouriteGenre (int candidateNumber, std::string candidateChoice, bool likesMusic = true, bool isOver18 = true) 
+void getFavouriteGenre(int candidateNumber, std::string candidateChoice, bool likesMusic = true, bool isOver18 = true) 
 {
-  ignoreUnused (candidateNumber, candidateChoice);
+    ignoreUnused(candidateNumber, candidateChoice, likesMusic, isOver18);
 }
 
 // 8
-void incrementDecayTime (double knobValueChange, int reverbType, bool pluginBypassed = 0) 
+void incrementDecayTime(double knobValueChange, int reverbType, bool pluginBypassed = 0) 
 {
-  ignoreUnused (knobValueChange, reverbType, pluginBypassed);
+    ignoreUnused(knobValueChange, reverbType, pluginBypassed);
 }
 
 // 9
-int calculateAgeDifference (int age1, int age2) 
+int calculateAgeDifference(int age1, int age2) 
 {
-  ignoreUnused (age1, age2);
-  return {};
+    ignoreUnused(age1, age2);
+    return { };
 }
 
 // 10
-bool canLegallyDrink (int age, int countryID, bool isHuman = true)
+bool canLegallyDrink(int age, int countryID, bool isHuman = true)
 {
-  ignoreUnused (age, countryID, isHuman);
-  return {};
+    ignoreUnused(age, countryID, isHuman);
+    return { };
 }
 
 /*
@@ -194,35 +190,40 @@ bool canLegallyDrink (int age, int countryID, bool isHuman = true)
 
 int main() 
 {
-  // example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
-  auto carRented = rentACar(6, 2);
+    // example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
+    auto carRented = rentACar(6, 2);
 
-  // 1)
+    // 1)
+    addAttitude(8.1266, 2);
+    
+    // 2)
+    auto currentVolume = getCurrentVolume(6.42f);
 
-  // 2)
-  auto currentVolume = getCurrentVolume(6.42f);
+    // 3)
+    auto isEngaged = isPersonEngaged(false, false);
 
-  // 3)
-  auto isEngaged = isPersonEngaged(false, false);
+    // 4)
+    playerTakeDamage(8.30f, 16);
 
-  // 4)
+    // 5)
+    updateAmmoCount(30, 600, 0.0166f);
 
-  // 5)
+    // 6)
+    auto salaryA = calculateSalary(27, 932.0f);
 
-  // 6)
-  auto salaryA = calculateSalary(27, 932.0f);
+    // 7)
+    getFavouriteGenre(28, "Soul");
 
-  // 7)
+    // 8)
+    incrementDecayTime(0.87542, 1);
 
-  // 8)
+    // 9)
+    auto ageDifference = calculateAgeDifference(24, 21);
 
-  // 9)
-  auto ageDifference = calculateAgeDifference(24, 21);
+    // 10)
+    auto isInvited = canLegallyDrink(26, 11);
 
-  // 10)
-  auto isInvited = canLegallyDrink(26, 11);
-
-  ignoreUnused (carRented, currentVolume, isEngaged, salaryA, ageDifference, isInvited);
-  std::cout << "good to go!" << std::endl;
-  return 0;
+    ignoreUnused(carRented, currentVolume, isEngaged, salaryA, ageDifference, isInvited);
+    std::cout << "good to go!" << std::endl;
+    return 0;
 }
